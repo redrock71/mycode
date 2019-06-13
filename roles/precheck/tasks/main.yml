@@ -26,3 +26,6 @@
     msg: "FAIL. Network device is running wrong firmware."
   when: "switchver not in ansible_facts.net_version"
 
+  - name:  Echo something
+      shell:  "echo 'This should be saved in {{ ansible_ssh_user }}'
+              >> /home/{{anssible_ssh_user}} /myfile.txt"
